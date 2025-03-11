@@ -12,7 +12,7 @@ Route::get('dashboard', function () {
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::get('schedule', function () {
-    return "1";
+    return Inertia::render('schedule/Schedule');
 })->middleware(['auth', 'verified'])->name('schedule');
 
 require __DIR__.'/settings.php';
